@@ -13,16 +13,16 @@
 
 Если бы задача стояла переписать с нуля, я бы как-то так написал:
 
-![Задание_2_2](https://github.com/arhipovea/devops-netology/blob/main/04_02/02_find_modified.sh)
+[Задание_2_2](https://github.com/arhipovea/devops-netology/blob/main/04_02/02_find_modified.sh)
 
 3. 
 
-![Задание_3](https://github.com/arhipovea/devops-netology/blob/main/04_02/03_find.sh)
+[Задание_3](https://github.com/arhipovea/devops-netology/blob/main/04_02/03_find.sh)
 
 4. 
 
-![Задание_4](https://github.com/arhipovea/devops-netology/blob/main/04_02/04_monitor.sh)
+[Задание_4](https://github.com/arhipovea/devops-netology/blob/main/04_02/04_monitor.sh)
 
 5. 
 
-![Задание_5](https://github.com/arhipovea/devops-netology/blob/main/04_02/05_dop.sh)
+[Задание_5](https://github.com/arhipovea/devops-netology/blob/main/04_02/05_dop.sh)
