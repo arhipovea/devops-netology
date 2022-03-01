@@ -83,6 +83,8 @@ insert into orders select * from orders;
 delete from only orders;
 ```
 
+Да, можно было тзачально секционировать таблицу.
+
 ## Задача 4
 
 Используя утилиту `pg_dump` создайте бекап БД `test_database`.
