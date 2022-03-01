@@ -64,6 +64,8 @@
 ---
 
 ```sql
+start transaction;
+
 create table orders_1 (check(price > 499)) inherits (orders);
 create table orders_2 (check(price <= 499)) inherits (orders);
 
@@ -81,6 +83,8 @@ insert into orders_2 values (new.*);
 
 insert into orders select * from orders;
 delete from only orders;
+
+commit;
 ```
 
 Да, можно было тзачально секционировать таблицу.
