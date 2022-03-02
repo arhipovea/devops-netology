@@ -56,6 +56,10 @@ Server version:		8.0.28 MySQL Community Server - GPL
 
 Исследуйте, какой `engine` используется в таблице БД `test_db` и **приведите в ответе**.
 
+![pic6](https://github.com/arhipovea/devops-netology/blob/main/06_03/assets/pic06.png)
+
+InnoDB
+
 Измените `engine` и **приведите время выполнения и запрос на изменения из профайлера в ответе**:
 - на `MyISAM`
 - на `InnoDB`
