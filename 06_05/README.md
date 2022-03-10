@@ -207,7 +207,34 @@ green open test v4wzbpc1RkmA5sym6tfoEQ 1 0 0 0 225b 225b
 
 ```bash
 ea@sv-msc-dev-01:~/es$ curl -X PUT "localhost:9200/_snapshot/netology_backup/%3Ctest_snapshot_%7Bnow%2Fd%7D%3E?wait_for_completion=true"
-{"snapshot":{"snapshot":"test_snapshot_2022.03.10","uuid":"zG4vN9dhTzm38oVGGyuxWQ","repository":"netology_backup","version_id":8010099,"version":"8.1.0","indices":[".geoip_databases","test"],"data_streams":[],"include_global_state":true,"state":"SUCCESS","start_time":"2022-03-10T18:33:42.202Z","start_time_in_millis":1646937222202,"end_time":"2022-03-10T18:33:43.402Z","end_time_in_millis":1646937223402,"duration_in_millis":1200,"failures":[],"shards":{"total":2,"failed":0,"successful":2},"feature_states":[{"feature_name":"geoip","indices":[".geoip_databases"]}]}}
+{
+  "snapshot": 
+    {
+      "snapshot" : "test_snapshot_2022.03.10",
+      "uuid" : "zG4vN9dhTzm38oVGGyuxWQ",
+      "repository" : "netology_backup",
+      "version_id" : 8010099,
+      "version" : "8.1.0",
+      "indices" : [".geoip_databases", "test"],
+      "data_streams" : [],
+      "include_global_state" : true,
+      "state" : "SUCCESS",
+      "start_time" : "2022-03-10T18:33:42.202Z",
+      "start_time_in_millis" : 1646937222202,
+      "end_time" : "2022-03-10T18:33:43.402Z",
+      "end_time_in_millis" : 1646937223402,
+      "duration_in_millis" : 1200,
+      "failures" : [],
+      "shards" :
+        {
+          "total" : 2,
+          "failed" : 0,
+          "successful" : 2
+        },
+      "feature_states" : [{"feature_name" : "geoip",
+                           "indices" : [".geoip_databases"]}]
+    }
+}
 ```
 
 ![pic03](https://github.com/arhipovea/devops-netology/blob/main/06_05/assets/pic03.png)
