@@ -1,15 +1,6 @@
-data "yandex_compute_image" "latest_ubuntu" {
-  family = var.ubuntu_family
-  folder_id = "standard-images"
-}
-
 output "ubuntu_last_id" {
   description = "ID of Ubuntu"
   value = "${data.yandex_compute_image.latest_ubuntu.id}"
-}
-
-data "yandex_resourcemanager_folder" "my_folder" {
-  folder_id = var.yc_folder_id
 }
 
 output "folder_name" {

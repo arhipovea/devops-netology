@@ -23,3 +23,13 @@ resource "yandex_compute_instance" "vm-1" {
       ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
 }
+
+#--------- data -------------------------------
+data "yandex_compute_image" "latest_ubuntu" {
+  family = var.ubuntu_family
+  folder_id = "standard-images"
+}
+
+data "yandex_resourcemanager_folder" "my_folder" {
+  folder_id = var.yc_folder_id
+}
