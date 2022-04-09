@@ -26,9 +26,3 @@ variable "ubuntu_family" {
   description = "Ubuntu family"
   default = "ubuntu-2004-lts"
 }
-
-variable "ubuntu_id" {
-  type = string
-  description = "Ubuntu latest id"
-  default = data.yandex_compute_image.latest_ubuntu.id
-}
