@@ -33,8 +33,7 @@ resource "yandex_compute_instance" "vm1" {
 
   # count = terraform.workspace == "prod" ? 2 : 1
   count = var.instance_count[terraform.workspace]
-
-  create_before_destroy = true
+  # for_each = ??? 
 
   resources {
     cores  = 2
