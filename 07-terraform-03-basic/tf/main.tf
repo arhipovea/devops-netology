@@ -34,6 +34,8 @@ resource "yandex_compute_instance" "vm1" {
   # count = terraform.workspace == "prod" ? 2 : 1
   count = var.instance_count[terraform.workspace]
 
+  create_before_destroy = true
+
   resources {
     cores  = 2
     memory = 2
@@ -55,33 +57,6 @@ resource "yandex_compute_instance" "vm1" {
   }
 }
 
-# resource "yandex_compute_instance" "vm2" {
-#   name = var.ubuntu_family
-#   platform_id = var.platform[terraform.workspace]
-
-#   chosen = terraform.workspace == "prod" ? 2 : 1
-#   for_each = var.instance_count[terraform.workspace]
-
-#   resources {
-#     cores  = 2
-#     memory = 2
-#   }
-
-#   boot_disk {
-#     initialize_params {
-#       image_id = "${data.yandex_compute_image.latest_ubuntu.id}"
-#     }
-#   }
-
-#   network_interface {
-#     subnet_id = yandex_vpc_subnet.subnet-1.id
-#     nat       = true
-#   }
-
-#   metadata = {
-#     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
-#   }
-# }
 
 # ================ Networks ==============================================
 resource "yandex_vpc_network" "network-1" {
