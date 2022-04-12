@@ -11,7 +11,9 @@
 
 ---
 Рассмотрим провайдер для яндекс облака.
+
 [resource](https://github.com/yandex-cloud/terraform-provider-yandex/blob/master/yandex/provider.go#L200)
+
 [data_source](https://github.com/yandex-cloud/terraform-provider-yandex/blob/master/yandex/provider.go#L138)
 
 ---
