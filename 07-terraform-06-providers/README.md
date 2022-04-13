@@ -50,13 +50,4 @@ if !regexp.MustCompile(`^[0-9A-Za-z-_]+(\.fifo)?$`).MatchString(value) {
 }
 ```
 
-[link](https://github.com/yandex-cloud/terraform-provider-yandex/blob/master/yandex/resource_yandex_message_queue.go#L466)
-
-## Задача 2. (Не обязательно) 
-В рамках вебинара и презентации мы разобрали как создать свой собственный провайдер на примере кофемашины. 
-Также вот официальная документация о создании провайдера: 
-[https://learn.hashicorp.com/collections/terraform/providers](https://learn.hashicorp.com/collections/terraform/providers).
-
-1. Проделайте все шаги создания провайдера.
-2. В виде результата приложение ссылку на исходный код.
-3. Попробуйте скомпилировать провайдер, если получится то приложите снимок экрана с командой и результатом компиляции.   
+[link](https://github.com/yandex-cloud/terraform-provider-yandex/blob/master/yandex/resource_yandex_message_queue.go#L466) 
