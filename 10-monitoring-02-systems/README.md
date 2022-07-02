@@ -37,8 +37,8 @@ push:
 P.S.: если при запуске некоторые контейнеры будут падать с ошибкой - проставьте им режим `Z`, например
 `./data:/var/lib:Z`
 
-![pic01](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-02-system/assets/01.png)
-![pic02](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-02-system/assets/02.png)
+![pic01](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-02-systems/assets/01.png)
+![pic02](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-02-systems/assets/02.png)
 
 4. Перейдите в веб-интерфейс Chronograf (`http://localhost:8888`) и откройте вкладку `Data explorer`.
 
@@ -52,7 +52,7 @@ P.S.: если при запуске некоторые контейнеры б�
 Для выполнения задания приведите скриншот с отображением метрик утилизации места на диске 
 (disk->host->telegraf_container_id) из веб-интерфейса.
 
-![pic03](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-02-system/assets/03.png)
+![pic03](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-02-systems/assets/03.png)
 
 5. Изучите список [telegraf inputs](https://github.com/influxdata/telegraf/tree/master/plugins/inputs). 
 Добавьте в конфигурацию telegraf следующий плагин - [docker](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/docker):
@@ -81,6 +81,6 @@ P.S.: если при запуске некоторые контейнеры б�
 После настройке перезапустите telegraf, обновите веб интерфейс и приведите скриншотом список `measurments` в 
 веб-интерфейсе базы telegraf.autogen . Там должны появиться метрики, связанные с docker.
 
-![pic03](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-02-system/assets/03.png)
+![pic03](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-02-systems/assets/03.png)
 
 Факультативно можете изучить какие метрики собирает telegraf после выполнения данного задания.
