@@ -31,7 +31,7 @@
 
 ---
 
-![pic01](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/assets/01.png)
+![pic01](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/assets/pic01.png)
 
 ## Задание 2
 Изучите самостоятельно ресурсы:
@@ -65,7 +65,7 @@ node_memory_MemFree_bytes
 node_filesystem_free_bytes{fstype!~"tmpfs|fuse.lxcfs|squashfs|ramfs|vfat"}
 ```
 
-![pic02](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/assets/02.png)
+![pic02](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/assets/pic02.png)
 
 ## Задание 3
 Создайте для каждой Dashboard подходящее правило alert (можно обратиться к первой лекции в блоке "Мониторинг").
@@ -74,7 +74,7 @@ node_filesystem_free_bytes{fstype!~"tmpfs|fuse.lxcfs|squashfs|ramfs|vfat"}
 
 ---
 
-![pic03](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/assets/03.png)
+![pic03](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/assets/pic03.png)
 
 
 ## Задание 4
