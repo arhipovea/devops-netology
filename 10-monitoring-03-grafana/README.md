@@ -29,6 +29,10 @@
 
 Решение домашнего задания - скриншот веб-интерфейса grafana со списком подключенных Datasource.
 
+---
+
+![pic01](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/assets/01.png)
+
 ## Задание 2
 Изучите самостоятельно ресурсы:
 - [promql-for-humans](https://timber.io/blog/promql-for-humans/#cpu-usage-by-instance)
@@ -42,10 +46,36 @@
 
 Для решения данного ДЗ приведите promql запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
 
+---
+```promql
+100 - avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[15s])) * 100
+```
+
+```promql
+node_load1
+node_load5
+node_load15
+```
+
+```promql
+node_memory_MemFree_bytes
+```
+
+```promql
+node_filesystem_free_bytes{fstype!~"tmpfs|fuse.lxcfs|squashfs|ramfs|vfat"}
+```
+
+![pic02](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/assets/02.png)
+
 ## Задание 3
 Создайте для каждой Dashboard подходящее правило alert (можно обратиться к первой лекции в блоке "Мониторинг").
 
 Для решения ДЗ - приведите скриншот вашей итоговой Dashboard.
+
+---
+
+![pic03](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/assets/03.png)
+
 
 ## Задание 4
 Сохраните ваш Dashboard.
@@ -58,8 +88,4 @@
 
 ---
 
-### Как оформить ДЗ?
-
-Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
-
----
+[[dashboard]](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-03-grafana/netology_dashboard.json)
