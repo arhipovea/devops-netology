@@ -31,7 +31,7 @@ Free cloud account имеет следующие ограничения:
 Для выполнения задание предоставьте скриншот `Stack trace` из этого события и список событий проекта, 
 после нажатия `Resolved`.
 
-![pic04](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-05-sentry/assets/pic04.png)
+![pic05](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-05-sentry/assets/pic05.png)
 
 ## Задание 3
 
