@@ -1,0 +1,3 @@
+{'timestamp': 1658908912, 'la1': 0.06, 'la5': 0.05, 'la15': 0.01, 'mem_total': 13033976, 'mem_free': 9446860, 'mem_available': 11283568}
+{'timestamp': 1658909208, 'la1': 0.01, 'la5': 0.02, 'la15': 0.0, 'mem_total': 13033976, 'mem_free': 9440020, 'mem_available': 11277220}
+{'timestamp': 1658910446, 'la1': 0.0, 'la5': 0.0, 'la15': 0.0, 'mem_total': 13033976, 'mem_free': 9421476, 'mem_available': 11261268}
