@@ -91,6 +91,7 @@ P.P.S.: по желанию можно себя не ограничивать т
 ---
 
 [code](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-01-base/get_awesome_monitoring_log.sh)
+
 [cron](https://github.com/arhipovea/devops-netology/blob/main/10-monitoring-01-base/awesome_monitoring)
 
 ---
