@@ -19,7 +19,7 @@
 
 Изменения в inventory:
 
-[hosts](https://github.com/arhipovea/devops-netology/tree/main/12-kubernetes-02-commands/inventory/netology/hosts.yaml)
+[hosts](https://github.com/arhipovea/devops-netology/blob/main/12-kubernetes-02-commands/inventory/netology/hosts.yaml)
 
 Изменения в общих настройках кластера:
 
