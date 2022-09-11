@@ -14,7 +14,7 @@
 
 ---
 
-Установил Calico с помощью Kubespray и удалил Flannel
+Установил Calico с помощью Kubespray
 
 ![pic02](https://github.com/arhipovea/devops-netology/blob/main/12-kubernetes-05-cni/assets/02.png)
 
