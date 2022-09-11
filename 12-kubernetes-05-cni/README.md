@@ -16,7 +16,7 @@
 
 Установил Calico с помощью Kubespray
 
-![pic02](https://github.com/arhipovea/devops-netology/blob/main/12-kubernetes-05-cni/assets/02.png)
+![pic02](https://github.com/arhipovea/devops-netology/blob/main/12-kubernetes-05-cni/assets/2.png)
 
 Развернул Hello-world и проверил доступность
 
