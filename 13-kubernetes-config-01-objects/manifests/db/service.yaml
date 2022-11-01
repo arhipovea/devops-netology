@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-svc
+  annotations:
+    yandex.cloud/load-balancer-type: internal
+    yandex.cloud/subnet-id: enpj0i3fn1grio9iu0qm
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 5432
+      targetPort: 5432
+  selector:
+    app: postgres-svc

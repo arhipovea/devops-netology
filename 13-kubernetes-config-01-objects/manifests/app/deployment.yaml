@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: main
+  name: main
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: main
+  template:
+    metadata:
+      labels:
+        app: main
+    spec:
+      containers:
+        - image: zicaentu/netology-13-1-backend
+          ports:
+            - containerPort: 9000
+              name: back
+              protocol: TCP
+          name: back
+          imagePullPolicy: IfNotPresent
+        - image: zicaentu/netology-13-1-frontend
+          ports:
+            - containerPort: 8000
+              name: 
+              protocol: TCP
+          name: front
+          imagePullPolicy: IfNotPresent
