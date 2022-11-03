@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fb-app
+  labels:
+    app: fb-app
+  namespace: stage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fb-app
+  template:
+    metadata:
+      labels:
+        app: fb-app
+    spec:
+      containers:
+        - image: zicaentu/netology-13-1-backend
+          name: backend
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9000
+              name: backport
+              protocol: TCP
+          env:
+            - name: DATABASE_URL
+              value: postgres://postgres:postgres@db:5432/news
+          volumeMounts:
+            - name: staticmount
+              mountPath: /static
+        - image: zicaentu/netology-13-1-frontend
+          name: frontend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              name: frontport
+              protocol: TCP
+          env:
+            - name: BASE_URL
+              value: http://fb-app-svc:9000
+          volumeMounts:
+            - name: staticmount
+              mountPath: /static
+      volumes:
+        - name: staticmount
+          emptyDir: {}
