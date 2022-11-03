@@ -1,38 +1,42 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: postgres
+  name: db
+  namespace: stage
 spec:
-  serviceName: postgres-svc
+  serviceName: db
   selector:
     matchLabels:
-      app: postgres
+      app: db
   replicas: 1
   template:
     metadata:
       labels:
-        app: postgres
+        app: db
     spec:
       terminationGracePeriodSeconds: 10
       containers:
-        - name: postgres
+        - name: db
           image: postgres:13-alpine
           volumeMounts:
-            - name: postgres-pvc
+            - name: db-pvc
               mountPath: /data
+          ports:
+            - containerPort: 5432
           env:
-            - name: POSTGRES_PASSWORD
-              value: postgres
             - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
               value: postgres
             - name: POSTGRES_DB
               value: news
+            - name: PGDATA
+              value: /data
   volumeClaimTemplates:
     - metadata:
-        name: postgres-pvc
+        name: db-pvc
       spec:
         accessModes: [ "ReadWriteOnce" ]
-        storageClassName: "yc-network-hdd"
         resources:
           requests:
-            storage: 1Gi
+            storage: 2Gi
