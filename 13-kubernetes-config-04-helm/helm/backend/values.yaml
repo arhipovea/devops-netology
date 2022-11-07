@@ -1,0 +1,41 @@
+replicaCount: 3
+
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+image:
+  repository: zicaentu/netology-13-1-backend
+  pullPolicy: IfNotPresent
+  tag: ""
+
+resources: 
+  limits:
+    cpu: 200m
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 256Mi
+
+ports:
+  name: backport
+  port: 9000
+
+volumes:
+  name: nfs-volume
+  path: "/static"
+
+  storageclass: nfs
+  storagecapacity: 1Gi  
+
+
+autoscaling:
+  enabled: false
+
+ingress:
+  enabled: false
+
+service:
+  type: ClusterIP
+  port: 9000

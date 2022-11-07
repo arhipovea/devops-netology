@@ -1,0 +1,48 @@
+replicaCount: 1
+
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: zicaentu/netology-13-1-frontend
+  pullPolicy: IfNotPresent
+  tag: ""
+
+podAnnotations: {}
+
+
+resources: 
+  limits:
+    cpu: 100m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 256Mi
+
+volumes:
+  name: nfs-volume
+  path: "/static"
+
+  storageclass: nfs
+  storagecapacity: 1Gi  
+
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: netology-prod.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+autoscaling:
+  enabled: false
