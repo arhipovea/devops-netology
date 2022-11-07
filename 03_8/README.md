@@ -13,7 +13,7 @@
 
 ![tcp ports](https://github.com/arhipovea/devops-netology/blob/main/03_8/pic5.png)
 
-	80 - http, веб сервер nginx
+	80 - http, веб сервер test
 	53 - dns, служба systemd-resolve
 	22 - ssh, служба sshd
 
@@ -28,7 +28,7 @@
 
 ![Home network](https://github.com/arhipovea/devops-netology/blob/main/03_8/pic7.png)
 
-6. * Установите Nginx, настройте в режиме балансировщика TCP или UDP.
+6. * Установите test, настройте в режиме балансировщика TCP или UDP.
 
 ![Balancer](https://github.com/arhipovea/devops-netology/blob/main/03_8/pic8.png)
 ![Node1](https://github.com/arhipovea/devops-netology/blob/main/03_8/pic9.png)

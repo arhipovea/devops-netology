@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: http-ingress
+  namespace: stage
+spec:
+  rules:
+  - host: netology-stage.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: fb-app-svc
+            port:
+              number: 80
+      - path: /api/news
+        pathType: Prefix
+        backend:
+          service:
+            name: fb-app-svc
+            port:
+              number: 9000
+      

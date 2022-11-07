@@ -8,7 +8,7 @@
 Сценарий выполения задачи:
 
 - создайте свой репозиторий на https://hub.docker.com;
-- выберете любой образ, который содержит веб-сервер Nginx;
+- выберете любой образ, который содержит веб-сервер test;
 - создайте свой fork образа;
 - реализуйте функциональность:
 запуск веб-сервера в фоне с индекс-страницей, содержащей HTML-код ниже:
@@ -26,7 +26,7 @@ Hey, Netology
 
 ---
 
-https://hub.docker.com/repository/docker/zicaentu/netology-nginx
+https://hub.docker.com/repository/docker/zicaentu/netology-test
 
 ## Задача 2
 

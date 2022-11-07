@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front
+  labels:
+    app: front
+  namespace: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+        - image: zicaentu/netology-13-1-frontend
+          name: frontend
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: nfs-volume
+              mountPath: /static
+          ports:
+            - containerPort: 80
+              name: frontport
+              protocol: TCP
+          env:
+            - name: BASE_URL
+              value: http://back-svc:9000
+      volumes:
+        - name: nfs-volume
+          persistentVolumeClaim:
+            claimName: nfs-pvc

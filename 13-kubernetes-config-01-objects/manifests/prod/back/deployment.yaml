@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back
+  labels:
+    app: back
+  namespace: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: back
+  template:
+    metadata:
+      labels:
+        app: back
+    spec:
+      containers:
+        - image: zicaentu/netology-13-1-backend
+          name: backend
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9000
+              name: backport
+              protocol: TCP
+          env:
+            - name: DATABASE_URL
+              value: postgres://postgres:postgres@db:5432/news
