@@ -121,7 +121,9 @@ kubectl apply -f domain-cert.yml
 
 ---
 
+[manifests](https://github.com/arhipovea/devops-netology/blob/main/14-clokub-homeworks-01-secrets/app/stage)
 
+![pic10](https://github.com/arhipovea/devops-netology/blob/main/14-clokub-homeworks-01-secrets/assets/pic10.png)
 
 ### Как оформить ДЗ?
 
