@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: app
+        image: zicaentu/netology-hvac:1.1.0
+        env:
+        - name: VAULT_URL
+          value: http://10.1.17.224:8200
+        - name: VAULT_TOKEN
+          value: aiphohTaa0eeHei
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+
