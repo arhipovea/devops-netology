@@ -14,12 +14,18 @@ spec:
     spec:
       containers:
       - name: app
-        image: zicaentu/netology-hvac:1.1.0
+        image: zicaentu/netology-hvac:1.2.3
         env:
         - name: VAULT_URL
-          value: http://10.1.17.224:8200
+          valueFrom:
+            secretKeyRef:
+              name: secenv
+              key: vault_url
         - name: VAULT_TOKEN
-          value: aiphohTaa0eeHei
+          valueFrom:
+            secretKeyRef:
+              name: secenv
+              key: vault_token
         resources:
           limits:
             memory: "128Mi"
