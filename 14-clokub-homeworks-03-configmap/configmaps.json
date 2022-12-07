@@ -1,0 +1,54 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "data": {
+                "ca.crt": "-----BEGIN CERTIFICATE-----\nMIIDDzCCAfegAwIBAgIUFROszbQCm9TnDAGMpBf/mIfrLswwDQYJKoZIhvcNAQEL\nBQAwFzEVMBMGA1UEAwwMMTAuMTUyLjE4My4xMB4XDTIyMTExNTEwNTA1NloXDTMy\nMTExMjEwNTA1NlowFzEVMBMGA1UEAwwMMTAuMTUyLjE4My4xMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5nhSz0l4PyEf/0cWni0wS3Gfpx7BwesEJCA/\nrmx6o1wPvFL5JYF/ZJ7mfbotFIVZN30la4uKKEExeOKdbF8HnphFlozVY1dZBtVd\n/0A9fhllKk66Atr5906f4gPnMzmplkDIO9vNHcQpRCvmTz2RZHQYFQOeh9vxzBdy\nNQzmmkdezMsZCpJ1UINGtrpyk3kvje3hTZSywZn6xc8pVzOHbTVNh/MdpHprtg7H\nsgXHjM1/eC6rNW5+U8hVR5rXx8ULbtbZoqyqmx4UMT2+t+fUYWRq/z2hZBhMW3g2\nm6OcOejGZgF6qJNQ8rXETVqx4iU5bpsxUIa3ivljFA7z+JLMjQIDAQABo1MwUTAd\nBgNVHQ4EFgQU4nI6N+fHPRCaQMKg7ry8cuk12UYwHwYDVR0jBBgwFoAU4nI6N+fH\nPRCaQMKg7ry8cuk12UYwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC\nAQEAGLX+/eJNv8uRdU6W26h2XUzWgZvtt/4JE0RZnjj3xYc+QRna84nLt1rTi0Dk\nlQg6isTaiT3zM2qyXrCU4AYhHnQ/2Ktlaul8V+0tmX7zI8zeUqWl07BulA0sat5R\nVBV06TrroZYVcStTDRgnXBeOWGBu1Q0vN2R6fdgmZp0cY5k+Lz6wXmtyVhmyJug0\n7B3IHEVdhnrdsgYJP2ZOkO5EX1Qd5I6h+4wH8jNdi8G2EuJ5FEDtkLQnsyAmF/H6\nEnqILVAEK06EwpSPXmqNBG1R3O5I9NFmz0XKPlMmtlqPrD4pHzcLB9hH3FjnsYn1\n6IX5WMBpfbEa+IWOmo/15IAuBg==\n-----END CERTIFICATE-----\n"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "annotations": {
+                    "kubernetes.io/description": "Contains a CA bundle that can be used to verify the kube-apiserver when using internal endpoints such as the internal service IP or kubernetes.default.svc. No other usage is guaranteed across distributions of Kubernetes clusters."
+                },
+                "creationTimestamp": "2022-12-07T06:43:39Z",
+                "name": "kube-root-ca.crt",
+                "namespace": "cfgns",
+                "resourceVersion": "588010",
+                "uid": "28c6218b-d748-4858-ab10-a0cb7f638f65"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "data": {
+                "nginx.conf": "server {\n    listen 80;\n    server_name  netology.ru www.netology.ru;\n    access_log  /var/log/nginx/domains/netology.ru-access.log  main;\n    error_log   /var/log/nginx/domains/netology.ru-error.log info;\n    location / {\n        include proxy_params;\n        proxy_pass http://10.10.10.10:8080/;\n    }\n}\n"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "creationTimestamp": "2022-12-07T06:47:30Z",
+                "name": "nginx-config",
+                "namespace": "cfgns",
+                "resourceVersion": "588579",
+                "uid": "623ceef3-f21a-49e3-9565-c4ac18e9c741"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "data": {
+                "name": "netology.ru"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "creationTimestamp": "2022-12-07T06:47:38Z",
+                "name": "domain",
+                "namespace": "cfgns",
+                "resourceVersion": "588598",
+                "uid": "228a4d7a-de40-4acb-9f47-399c3256f1b2"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}
