@@ -1,5 +1,5 @@
-resource "yandex_compute_instance" "vm-1" {
-  name = "netology-vm-1"
+resource "yandex_compute_instance" "public-vm" {
+  name = "netology-public-vm"
   platform_id = "standard-v1"
   zone = var.yc_zone
 
