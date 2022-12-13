@@ -25,7 +25,7 @@ Resource terraform для ЯО
 - [Compute Instance](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/compute_instance)
 ---
 
-[TERRAFORM](https://github.com/arhipovea/devops-netology/blob/main/14-clokub-homeworks-05-security/tf)
+[TERRAFORM](https://github.com/arhipovea/devops-netology/blob/main/15-clokub-homeworks-01-net/tf)
 
 ![pic01](https://github.com/arhipovea/devops-netology/blob/main/15-clokub-homeworks-01-net/assets/pic01.png)
 
